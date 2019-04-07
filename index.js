@@ -1,11 +1,14 @@
 import { useState } from 'react';
 
+export const useCDM = () => {
+
+}
+
 export const useForm = (cb) => {
     const [fields, setFields] = useState({});
 
     const submit = e => {
-        e && e.persist();
-        cb(e);
+        e && cb(e);
     }
 
     const handleChanges = (e) => {
