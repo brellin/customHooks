@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export function useHandleChanges(field) {
+export function useHandleChanges() {
     const [field, setField] = useState('');
 
     useEffect((e) => {
