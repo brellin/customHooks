@@ -1,6 +1,25 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
-export const useForm = (cb) => {
+export const useCDM = (url, setData) => {
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        mounted &&
+            axios
+                .get(`${url}`)
+                .then(res => setData(res.data))
+                .catch(err => console.log(err))
+        setMounted(true)
+    })
+
+    return {
+        mounted,
+        setMounted
+    }
+}
+
+export const useForm = cb => {
     const [fields, setFields] = useState({});
 
     const submit = e => {
