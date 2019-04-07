@@ -4,8 +4,8 @@ export const useForm = (cb) => {
     const [fields, setFields] = useState({});
 
     const submit = e => {
-        e && e.preventDefault();
-        cb();
+        e && e.persist();
+        cb(e);
     }
 
     const handleChanges = (e) => {
