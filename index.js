@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 export const useCDM = (url, setData) => {
-    const [mounted, setMounted] = useState(false);
-
     useEffect(() => {
         axios
             .get(url)
@@ -11,10 +9,22 @@ export const useCDM = (url, setData) => {
             .catch(err => console.log(err))
         setMounted(true)
     }, [])
+}
+
+export const useCDU = (url, setData) => {
+    const [updated, setUpdated] = useState(false);
+
+    useEffect(() => {
+        axios
+            .get(url)
+            .then(res => setData(res.data))
+            .catch(err => console.log(err))
+        setUpdated(true)
+    }, [updated])
 
     return {
-        mounted,
-        setMounted
+        updated,
+        setUpdated
     }
 }
 
