@@ -11,7 +11,7 @@ export const useCDM = (url, setData) => {
                 .then(res => setData(res.data))
                 .catch(err => console.log(err))
         setMounted(true)
-    })
+    }, [])
 
     return {
         mounted,
