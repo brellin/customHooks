@@ -5,11 +5,10 @@ export const useCDM = (url, setData) => {
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => {
-        mounted &&
-            axios
-                .get(url)
-                .then(res => setData(res.data))
-                .catch(err => console.log(err))
+        axios
+            .get(url)
+            .then(res => setData(res.data))
+            .catch(err => console.log(err))
         setMounted(true)
     }, [])
 
