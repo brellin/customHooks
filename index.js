@@ -1,24 +1,16 @@
 import { useState, useEffect } from 'react';
-import axios from 'axios';
 
-export const useCDM = (url, setData) => {
+export const useCDM = (func) => {
     useEffect(() => {
-        axios
-            .get(url)
-            .then(res => setData(res.data))
-            .catch(err => console.log(err))
-        setMounted(true)
+        func
     }, [])
 }
 
-export const useCDU = (url, setData) => {
+export const useCDU = (func) => {
     const [updated, setUpdated] = useState(false);
 
     useEffect(() => {
-        axios
-            .get(url)
-            .then(res => setData(res.data))
-            .catch(err => console.log(err))
+        func
         setUpdated(true)
     }, [updated])
 
