@@ -5,7 +5,7 @@ This repository contains my custom hooks
 
  Hook | Constructed/Uses 
  ---- | ----------------
- `useForm` | Takes a callback function and returns `fields` - an object whose keys you can name, `submit` - returns the callback function provided, and `handleChanges` - updates the `field` that you specify with a `.`
+ `useForm` | Takes a callback function and returns `fields` - an object whose keys you can name, `submit` - calls the callback function passed in with updated fields as arguments, and `handleChanges` - updates the `field` that you specify with a `.`
 
 ### useForm
  ```
