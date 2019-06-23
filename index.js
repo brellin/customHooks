@@ -5,7 +5,7 @@ export const useForm = cb => {
 
     const submit = e => {
         e && e.preventDefault();
-        cb();
+        cb(fields);
     }
 
     const handleChanges = e => {
