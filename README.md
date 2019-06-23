@@ -5,7 +5,7 @@ This repository contains my custom hooks
 
  Hook | Constructed/Uses 
  ---- | :--------------:
- `useForm` | Takes a callback function and returns `fields` - an object whose keys you can name, \\ `submit` - calls the callback function passed in with updated fields as arguments, and `handleChanges` - updates the `field` that you specify using dot notation.
+ `useForm` | Takes a callback function and returns `fields` - an object whose keys you can name, <br> `submit` - calls the callback function passed in with updated fields as arguments, and `handleChanges` - updates the `field` that you specify using dot notation.
 
 ### useForm
  ```javascript
