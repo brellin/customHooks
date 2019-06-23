@@ -8,7 +8,7 @@ This repository contains my custom hooks
  `useForm` | Takes a callback function and returns `fields` - an object whose keys you can name, `submit` - calls the callback function passed in with updated fields as arguments, and `handleChanges` - updates the `field` that you specify using dot notation.
 
 ### useForm
- ```
+ ```javascript
 import { useForm } from 'customHooks'
 const { fields, submit, handleChanges } = useForm(submitFunc)
 
