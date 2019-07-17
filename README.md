@@ -13,7 +13,7 @@ import { useForm } from 'customHooks'
 const { fields, submit, handleChanges } = useForm(submitFunc)
 
 <form onSubmit={submit}>
-    <input name='username' value={fields.username} onChange={handleChanges} />
-    <input name='password' value={fields.password} onChange={handleChanges} />
+    <input name='username' onChange={handleChanges} />
+    <input name='password' onChange={handleChanges} />
 </form>
 ```
