@@ -1,16 +1,17 @@
-import { useState } from 'react';
+import { useState } from 'react'
 
 export const useForm = cb => {
-    const [fields, setFields] = useState({});
+    const [fields, setFields] = useState({})
 
     const submit = e => {
-        e && e.preventDefault();
-        cb(fields);
+        e && e.preventDefault()
+        cb(fields)
+        setFields({})
     }
 
     const handleChanges = e => {
-        e.preventDefault();
-        setFields({ ...fields, [e.target.name]: e.target.value });
+        e.preventDefault()
+        setFields({ ...fields, [e.target.name]: e.target.value })
     }
 
     return {
